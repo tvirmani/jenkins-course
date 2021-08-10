@@ -1,12 +1,13 @@
 node {
 
   // config 
+  
   def to = emailextrecipients([
           [$class: 'CulpritsRecipientProvider'],
           [$class: 'DevelopersRecipientProvider'],
           [$class: 'RequesterRecipientProvider']
   ])
-
+ def to = "tvirmani-c50640@inbox.mailtrap.io";
   // job
   try {
     stage('build') {
